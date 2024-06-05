@@ -1,4 +1,5 @@
 import { Container, Text, VStack, Box, Heading, SimpleGrid, Card, CardHeader, CardBody, CardFooter, Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const jobListings = [
   {
@@ -46,7 +47,7 @@ const Index = () => {
                 <Text>{job.description}</Text>
               </CardBody>
               <CardFooter>
-                <Button colorScheme="teal" variant="solid">
+                <Button as={Link} to="/post-job" colorScheme="teal" variant="outline">
                   Apply Now
                 </Button>
               </CardFooter>
